@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+        <form class="text-center" style="color: #757575;" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div>
+            <div>
+                <label >Username</label>
+                <input type="text"  name="uname"  required>
+            </div>
+            <div>
+                <label >Password</label>
+                <input type="text"  name="pwd1"  required>
+            </div>
+            <div>
+                <label >conform  Password</label>
+                <input type="text"  name="pwd2"  required>
+            </div>
+            <div>
+                <label >Name</label>
+                <input type="text"  name="name"  required>
+            </div>
+            <div>
+                <label >Email</label>
+                <input type="email" name="email"  required>
+            </div>
+            <div>
+                <label >Cinic name</label>
+                <input type="text"  name="cname"  required>
+            </div>
+            <div>
+                <label >mobile</label>
+                <input type="text"  name="mobile"  required>
+            </div>
+        </div>
+        <div>
+            <button type="submit">SIGN UP</button>
+        </div>
+        </form>
+        
+</body>
+</html>
