@@ -21,7 +21,6 @@ def patient_signup(request):
                 email = request.POST['email']
                 pat_obj = Patient(user_id=user.id,name= name,email=email )
                 pat_obj.save()
-                auth.login(request,user)
                 return redirect("logins")
         else:
             return render(request,'patient/signup.html')
@@ -42,7 +41,6 @@ def doctor_signup(request):
                 cname = request.POST['cname']
                 doc_obj = Doctor(user_id=user.id,name= name,email=email,clinic_name=cname)
                 doc_obj.save()
-                auth.login(request,user)
                 return redirect("logins")
         else:
             return render(request,'doctor/signup.html')
@@ -63,7 +61,6 @@ def clinic_admin_signup(request):
                 mobile = request.POST['mobile']
                 ca_obj = Clinic_admin(user_id=user.id,name= name,email=email,clinic_name=cname,mobile=mobile )
                 ca_obj.save()
-                auth.login(request,user)
                 return redirect("logins")
         else:
             return render(request,'clinic_admin/signup.html')
